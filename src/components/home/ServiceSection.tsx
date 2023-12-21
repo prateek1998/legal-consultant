@@ -81,8 +81,8 @@ const ServiceSection = () => {
           We make your life easier by solving legal problems like
         </h1>
         <div className="grid pt-4 grid-cols-1 gap-x-4 gap-y-6 lg:gap-x-8 lg:gap-y-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <div className="w-full border-2 border-blue-200 p-4 text-center transition-all bg-primary-700 rounded-lg hover:bg-primary-600 hover:shadow-lg">
+          {services.map((service, index) => (
+            <div key={index} className="w-full border-2 border-blue-200 p-4 text-center transition-all bg-primary-700 rounded-lg hover:bg-primary-600 hover:shadow-lg">
               <p className="text-left text-white -400 pb-4"> 0{service.id}</p>
               <img className="mx-auto mb-3" src={`assets/logos/${service.logo}`} />
               <h3 className="mb-4 text-2xl capitalize font-semibold text-white">

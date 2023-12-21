@@ -102,8 +102,8 @@ const TestimonialSection = () => {
         </div>
         <div className="flex ">
           <div className="grid grid-cols-1 gap-4 lg:gap-4 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {testimonials.map((testimonial) => (
-              <div className="mb-8 bg-white rounded shadow dark:bg-gray-700">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="mb-8 bg-white rounded shadow dark:bg-gray-700">
                 <div className="relative z-20 p-8 -mt-14 ">
                   <span className="inline-block p-3 mb-3 text-xs text-white bg-blue-500 rounded-full">
                     <svg
