@@ -1,4 +1,7 @@
+import AboutSection from "components/home/AboutSection";
 import HeroSection from "components/home/HeroSection";
+import ServiceSection from "components/home/ServiceSection";
+import TestimonialSection from "components/home/TestimonialSection";
 import Layout from "components/layout"
 import Image from "next/image";
 
@@ -6,6 +9,9 @@ function Home() {
   return (
     <main>
       <HeroSection/>
+      <AboutSection/>
+      <ServiceSection/>
+      <TestimonialSection/>
       
             {/* <h2 className="h-screen bg-yellow-50">hello pradteek</h2>
             <h2 className="h-screen bg-pink-50">hello pradteek</h2>

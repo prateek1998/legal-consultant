@@ -7,7 +7,7 @@ const SubHeader = () => {
 
   return (
     <Fragment>
-      <div className="px-4 pt-1 border-b-2 border-dashed bg-black bg-opacity-40">
+      <div className="px-4 pt-1 hidden md:flex border-b-2 border-dashed bg-black bg-opacity-40">
         <div className="flex h-10 px-4 w-full items-center justify-between">
           {/* Left subHeader Options */}
           <div className="flex items-center text-sm text-white">

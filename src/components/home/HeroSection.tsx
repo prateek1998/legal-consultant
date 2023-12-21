@@ -80,7 +80,7 @@ const HeroSection = () => {
                 </motion.div>
             </div>
             <div>
-                <Link href="#serving" className="bottom-5 lg:bottom-10 left-1/2 -translate-x-1/2 absolute z-10 flex flex-col items-center">
+                <Link href="#about" className="bottom-5 lg:bottom-10 left-1/2 -translate-x-1/2 absolute z-10 flex flex-col items-center">
                     <div className="relative w-12 h-12 rounded-full border-2 bg-transparent flex items-center justify-center">
                         <motion.svg animate={{ y: [0, 5, 0] }} transition={{ repeat: Infinity, duration: 1 }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v14m6-6l-6 6m-6-6l6 6" />

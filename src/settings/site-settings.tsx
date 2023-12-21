@@ -75,7 +75,7 @@ const siteSettings = {
   },
   headerNavigation: [
     { name: 'Home', href: '/', current: false },
-    { name: 'Practice Areas', href: '/practice-areas', current: false },
+    { name: 'Practice Areas', href: '#practice-areas', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Our Work ', href: '/works', current: false },
     { name: 'Contact Us', href: '/contact-us', current: false },
