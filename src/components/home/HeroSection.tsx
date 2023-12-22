@@ -74,7 +74,7 @@ const HeroSection = () => {
                 >
                     <motion.h2 className="title-font font-alike font-medium mb-3 text-4xl lg:text-5xl text-white capitalize" variants={textVariants}>
                         <span className=' border-b-2 border-white'> Legal Experts</span></motion.h2>
-                    <motion.h2 className="text-white text-7xl font-bold capitalize font-alike sm:pb-1" variants={textVariants}>
+                    <motion.h2 className="text-white text-5xl md:text-7xl font-bold capitalize font-alike sm:pb-1" variants={textVariants}>
                         Focused on  Client Based Law firm
                     </motion.h2>
                 </motion.div>
