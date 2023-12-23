@@ -41,7 +41,7 @@ const textVariants = {
 const HeroSection = () => {
     return (
         <section className="relative">
-            <div className='absolute z-40 w-full top-0'>
+            <div className='absolute z-20 w-full top-0'>
                 <SubHeader />
                 <Header isDefault={true}/>
             </div>

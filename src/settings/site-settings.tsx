@@ -10,18 +10,8 @@ const siteSettings = {
     websiteUrl: 'https://sethiandassociates.com',
     address:'G-27, Preet Vihar, Near Preet Vihar Metro Station, Delhi-110092',
   },
-  ogImageUrl: 'https://cdn.radixhealthcare.org/v1/assets/radix-web/images/radix-og-image.png',
- 
-  logo: {
-    lgUrl: 'https://cdn.radixhealthcare.org/v1/assets/radix-web/logos/lg-radix-new.svg', // lg-radix-logo.svg",
-    mdUrl: 'https://cdn.radixhealthcare.org/v1/assets/radix-web/logos/md-radix-new.svg',
-    smUrl: 'https://cdn.radixhealthcare.org/v1/assets/radix-web/logos/sm-radix-new.svg',
-    alt: 'sethi-logo',
-    href: '/',
-    width: 128,
-    height: 30,
-  },
-  spinner: 'https://cdn.radixhealthcare.org/v1/assets/radix-web/images/radix-logo-optimize.gif',
+  ogImageUrl: 'https://sethiandassociates.com/assets/logos/logo.jpg',
+  spinner: 'http://127.0.0.1:3000/assets/logos/logogif.gif',
   socialHandler: [
     {
       id: 0,
@@ -52,7 +42,7 @@ const siteSettings = {
     location: {
       label: 'Find Location',
       icon: <Icon icon="ic:round-location-on" className="text-xl text-primary-600" />,
-      href: 'https://goo.gl/maps/o8GwkU9HGpETQ5en7',
+      href: 'https://maps.app.goo.gl/zskyiVjyfSVcSwD48',
     },
     phone: {
       icon: <Icon icon="ic:baseline-phone-in-talk" className="text-xl text-primary-600" />,
@@ -75,8 +65,8 @@ const siteSettings = {
   },
   headerNavigation: [
     { name: 'Home', href: '/', current: false },
-    { name: 'Practice Areas', href: '#practice-areas', current: false },
-    { name: 'About', href: '/about', current: false },
+    { name: 'Practice Areas', href: '/#practice-areas', current: false },
+    { name: 'About', href: '/about-us', current: false },
     { name: 'Our Work ', href: '/works', current: false },
     { name: 'Contact Us', href: '/contact-us', current: false },
   ],
@@ -85,8 +75,8 @@ const siteSettings = {
       title: 'QUICK LINKS',
       links: [
         { label: 'Home', href: '/' },
-        { label: 'Practice Areas', href: '/practice-areas' },
-        { label: 'About', href: '/about' },
+        { label: 'Practice Areas', href: '/#practice-areas' },
+        { label: 'About', href: '/about-us' },
         { label: 'Our Work', href: '/works' },
         { label: 'Contact Us', href: '/contact-us' },
       ],
@@ -119,18 +109,18 @@ const siteSettings = {
         {
           label:
             'G-27, Preet Vihar, Near Preet Vihar Metro Station, Delhi-110092',
-          href: 'https://goo.gl/maps/o8GwkU9HGpETQ5en7',
+          href: 'https://maps.app.goo.gl/zskyiVjyfSVcSwD48',
           icon: <Icon icon="ic:round-location-on" className="text-xl text-primary-600 mr-1" />,
         },
       ],
     },
-    {
-      title: 'Others',
-      links: [
-        { label: 'Terms & Conditions', href: '/terms-conditions' },
-        { label: 'Privacy Policy', href: '/privacy-policy' },
-      ],
-    },
+    // {
+    //   title: 'Others',
+    //   links: [
+    //     { label: 'Terms & Conditions', href: '/terms-conditions' },
+    //     { label: 'Privacy Policy', href: '/privacy-policy' },
+    //   ],
+    // },
   ],
 };
 

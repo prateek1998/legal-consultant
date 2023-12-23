@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const textVariants = {
   initial: {
@@ -27,7 +28,7 @@ const textVariants = {
 
 const AboutSection = () => {
   return (
-    <section id="about" className="lg:mt-5 font-poppins dark:bg-gray-800">
+    <section id="about" className="lg:mt-10 font-poppins dark:bg-gray-800">
       <div className="max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
         <div className="flex flex-wrap ">
           <div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 ">
@@ -56,18 +57,20 @@ const AboutSection = () => {
                 the people since 35 years now.
               </p>
               <Link
-                href={"#"}
-                className="w-40 mx-auto text-center bg-blue-800  hover:bg-blue-600 text-white font-bold py-3 px-6 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+                href={"/about-us"}
+                className="w-40 mx-auto text-center bg-primary-700  hover:bg-blue-600 text-white font-bold py-3 px-6 border-b-4 border-blue-700 hover:border-blue-500 rounded"
               >
                 Know More
               </Link>
             </div>
           </div>
-          <div className="w-full mb-10 lg:w-1/2 lg:mb-0">
-            <img
-              src="/assets/images/bg/IMG_2879.jpg"
+          <div className="w-full mb-10 lg:w-1/2 lg:mb-0 ">
+            <Image
+              src="/assets/images/about.jpg"
               alt=""
-              className="relative object-cover w-full h-full rounded"
+              width={450}
+              height={50}
+              className="relative object-cover h-full rounded"
             />
           </div>
         </div>
@@ -75,7 +78,7 @@ const AboutSection = () => {
       <div className="relative py-10 bg-center bg-no-repeat bg-cover bg-blue-900">
         <div className="absolute top-0 left-0 w-full h-full bg-gray-900 bg-opacity-60 "></div>
         <div className="relative z-10 justify-center flex-1 max-w-6xl px-4 py-4 mx-auto lg:py-0">
-          <div className="flex items-center justify-between py-4 -mx-3">
+          <div className="flex items-center justify-evenly py-4 -mx-3">
             <div className="w-full px-4 lg:mb-0 md:w-1/4 lg:w-2/12">
               <h2 className="pb-2 text-5xl font-bold text-white">98% </h2>
               <div className="w-16 mb-4 border-b-2 border-gray-300 "></div>
@@ -90,13 +93,13 @@ const AboutSection = () => {
                 Years Practice
               </p>
             </div>
-            <div className="w-full px-4 lg:mb-0 md:w-1/4 lg:w-2/12">
+            {/* <div className="w-full px-4 lg:mb-0 md:w-1/4 lg:w-2/12">
               <h2 className="pb-2 text-5xl font-bold text-white">20+ </h2>
               <div className="w-16 mb-4 border-b-2 border-gray-300 "></div>
               <p className="text-base font-normal leading-4 text-gray-300 lg:w-64">
                 Different Industries
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

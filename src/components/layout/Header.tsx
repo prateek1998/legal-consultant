@@ -4,11 +4,14 @@ import React, { useEffect, useState } from "react";
 import siteSettings from "settings/site-settings";
 import Drawer from "../drawer";
 // const Header: React.FC<> = () => {
-const Header: React.FC<{ isDefault: boolean }> = ({ isDefault }) => {
+const Header: React.FC<{ isDefault: boolean; defaultRoute: boolean }> = ({
+  isDefault,
+  defaultRoute,
+}) => {
   const { headerNavigation } = siteSettings;
   const [open, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
-  
+
   // detect whether user has scrolled the page down by 250px
   useEffect(() => {
     if (isDefault) {
@@ -31,9 +34,9 @@ const Header: React.FC<{ isDefault: boolean }> = ({ isDefault }) => {
       <nav
         className={`text-white flex items-center border-b-2 border-dashed w-full px-5 py-4 transition-all duration-300 ease-out ${
           isScrolled
-            ? "bg-primary-700 bg-opacity-90 backdrop-blur-sm fixed top-0 shadow-md"
-            : "bg-black bg-opacity-40 "
-        }`}
+            ? "bg-primary-700  bg-opacity-90 backdrop-blur-sm fixed top-0 shadow-md"
+            : "bg-black bg-opacity-40"
+        } ${defaultRoute ? "z-0" : "z-20"}`}
       >
         <Link href="/" className="flex items-center">
           <Image
@@ -42,10 +45,10 @@ const Header: React.FC<{ isDefault: boolean }> = ({ isDefault }) => {
             height={100}
             alt="logo"
           />
+          <p className="text-3xl hidden md:block font-alike font-bold">
+            SETHI & ASSOCIATES LEGAL CONSULTANTS
+          </p>
         </Link>
-        <p className="text-3xl hidden md:block font-alike font-bold">
-          SETHI & ASSOCIATES LEGAL CONSULTANTS
-        </p>
         <nav className="hidden lg:flex flex-grow ">
           <div className="flex flex-grow font-body justify-end flex-wrap items-center">
             <div className="flex uppercase lg:text-base">
@@ -65,30 +68,48 @@ const Header: React.FC<{ isDefault: boolean }> = ({ isDefault }) => {
             </div>
           </div>
         </nav>
-        <button
-          onClick={handleDrawer}
-          type="button"
-          className="md:hidden flex flex-grow font-body justify-end flex-wrap items-center"
-          aria-controls="mobile-menu"
-          aria-expanded="false"
-        >
-          <span className="sr-only">Open main menu</span>
-          <svg
-            className="block h-10 w-10"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            aria-hidden="true"
+        <div className="md:hidden flex flex-grow font-body justify-end flex-wsrap items-center">
+          <Link
+            href="tel:+919958852527"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            className=" flex flex-col justify-center items-center pt-5 mr-3 "
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
+            <svg
+              fill="currentColor"
+              viewBox="0 0 16 16"
+              height="2em"
+              width="2em"
+              // {...props}
+            >
+              <path d="M3.654 1.328a.678.678 0 00-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 004.168 6.608 17.569 17.569 0 006.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 00-.063-1.015l-2.307-1.794a.678.678 0 00-.58-.122l-2.19.547a1.745 1.745 0 01-1.657-.459L5.482 8.062a1.745 1.745 0 01-.46-1.657l.548-2.19a.678.678 0 00-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 012.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 00.178.643l2.457 2.457a.678.678 0 00.644.178l2.189-.547a1.745 1.745 0 011.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 01-7.01-4.42 18.634 18.634 0 01-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 01.5-.5h4a.5.5 0 01.5.5v4a.5.5 0 01-1 0V1.707l-4.146 4.147a.5.5 0 01-.708-.708L14.293 1H11.5a.5.5 0 01-.5-.5z" />
+            </svg>
+            <span className="">Call to Us</span>
+          </Link>
+          <button
+            onClick={handleDrawer}
+            type="button"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <span className="sr-only">Open main menu</span>
+            <svg
+              className="block h-10 w-10"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
       </nav>
       <Drawer open={open} onClose={handleDrawer} title="Menus">
         <div

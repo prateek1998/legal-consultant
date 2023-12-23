@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="lg:w-64 w-full flex-shrink-0 lg:mx-0 mx-auto text-center lg:text-left">
           <a className="flex title-font font-medium items-center lg:justify-start justify-center ">
             <Image
-              className="sm:h-20 h-26 w-auto mb-4 lg:mb-0"
+              className="sm:h-20 h-26 w-asuto mb-4 lg:mb-0"
               width={120}
               height={30}
               src="/assets/logos/logo1.svg"
@@ -39,6 +39,7 @@ const Footer = () => {
                         <li key={link.label}>
                           <Link
                             href={link.href}
+                            target="_blank"
                             className="flex justify-center lg:justify-start text-sm font-thin hover:underline"
                           >
                             <span>{link.icon}</span>
@@ -49,7 +50,7 @@ const Footer = () => {
                     })}
                   </nav>
                 </div>
-                <div className="border-b-4 mx-auto my-4 w-12 lg:hidden" />
+                <div className="border-b-4 mx-auto my-4 w-16 lg:hidden" />
               </div>
             );
           })}
@@ -59,7 +60,7 @@ const Footer = () => {
       {/* subFooter for copyrights and social links */}
       <div className="bg-primary-1000 border-t-2 border-t-gray-500 px-4">
         <div className="container mx-auto py-4 px-2 flex flex-col lg:flex-row items-center justify-between">
-          <p className="text-white text-sm text-center sm:text-left">
+          <p className="text-white text-sm mx-auto text-center sm:text-left">
             © {new Date().getFullYear()} by
             <Link
               href="https://www.linkedin.com/in/keshav-sethi-10"
@@ -67,9 +68,19 @@ const Footer = () => {
               className="text-white ml-1 hover:underline tracking-wide"
               target="_blank"
             >
-            Sethi & Associates Legal Consultant
+            {siteSettings.author.name}
             </Link>
-            <span> All Rights Reserved.</span>
+            <span className='mr-2'> All Rights Reserved.</span>
+              Developed by 
+              <a
+                href="https://www.instagram.com/codingwithprateek"
+                target="_blank"
+                className={'text-primary-100  s-xl font-alike mx-1'}
+                data-te-toggle="tooltip"
+                title={`Follow us on Instagram`}
+              >
+                Coding with Prateek
+              </a>
           </p>
           {/* <div className="flex items-center lg:ml-auto mt-2 lg:mt-0 justify-center sm:justify-start">
             Developed by 

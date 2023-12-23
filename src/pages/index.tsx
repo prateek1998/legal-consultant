@@ -12,7 +12,7 @@ function Home() {
       <AboutSection/>
       <ServiceSection/>
       <TestimonialSection/>
-      
+    
             {/* <h2 className="h-screen bg-yellow-50">hello pradteek</h2>
             <h2 className="h-screen bg-pink-50">hello pradteek</h2>
             <h2 className="h-screen bg-orange-200">hello pradteek</h2> */}
