@@ -20,7 +20,7 @@ const Layout: React.FC<Props> = ({ children }) => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* <DisclaimerDialog /> */}
+      <DisclaimerDialog />
       <Header isDefault={false} defaultRoute={defaultRoute} />
       <main className="flex-auto">{children}</main>
       <Footer />

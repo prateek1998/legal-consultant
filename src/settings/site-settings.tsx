@@ -66,7 +66,7 @@ const siteSettings = {
     { name: 'Home', href: '/', current: false },
     { name: 'Practice Areas', href: '/#practice-areas', current: false },
     { name: 'About', href: '/about-us', current: false },
-    { name: 'Our Work ', href: '/works', current: false },
+    { name: 'Our Work ', href: '/work', current: false },
     { name: 'Contact Us', href: '/contact-us', current: false },
   ],
   footerNavigation: [
@@ -76,7 +76,7 @@ const siteSettings = {
         { label: 'Home', href: '/' },
         { label: 'Practice Areas', href: '/#practice-areas' },
         { label: 'About', href: '/about-us' },
-        { label: 'Our Work', href: '/works' },
+        { label: 'Our Work', href: '/work' },
         { label: 'Contact Us', href: '/contact-us' },
       ],
     },

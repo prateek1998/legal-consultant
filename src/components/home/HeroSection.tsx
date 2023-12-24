@@ -63,7 +63,7 @@ const HeroSection = () => {
             </div>
           ))}
       </Slider>
-      <div className="container absolute z-30 px-2 sm:px-7 mx-auto flex flex-wrap items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl bg-opacity-30 sm:py-6 bg-blend-saturation">
+      <div className="container absolute z-10 px-2 sm:px-7 mx-auto flex flex-wrap items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl bg-opacity-30 sm:py-6 bg-blend-saturation">
         <motion.div
           className="lg:w-2/5 w-full textShadow tracking-wide"
           variants={textVariants}
