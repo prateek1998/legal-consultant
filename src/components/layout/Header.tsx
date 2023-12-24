@@ -1,8 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import siteSettings from "settings/site-settings";
-import Drawer from "../drawer";
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import siteSettings from 'settings/site-settings';
+import Drawer from '../drawer';
 // const Header: React.FC<> = () => {
 const Header: React.FC<{ isDefault: boolean; defaultRoute: boolean }> = ({
   isDefault,
@@ -18,13 +18,13 @@ const Header: React.FC<{ isDefault: boolean; defaultRoute: boolean }> = ({
       const scrollHandler = () => {
         window.pageYOffset > 250 ? setIsScrolled(true) : setIsScrolled(false);
       };
-      window.addEventListener("scroll", scrollHandler);
-      return () => window.removeEventListener("scroll", scrollHandler);
+      window.addEventListener('scroll', scrollHandler);
+      return () => window.removeEventListener('scroll', scrollHandler);
     } else setIsScrolled(true);
   }, [isScrolled]);
 
   function classNames(...classes: any) {
-    return classes.filter(Boolean).join(" ");
+    return classes.filter(Boolean).join(' ');
   }
   const handleDrawer = () => {
     setOpen(!open);
@@ -34,17 +34,12 @@ const Header: React.FC<{ isDefault: boolean; defaultRoute: boolean }> = ({
       <nav
         className={`text-white flex items-center border-b-2 border-dashed w-full px-5 py-4 transition-all duration-300 ease-out ${
           isScrolled
-            ? "bg-primary-700  bg-opacity-90 backdrop-blur-sm fixed top-0 shadow-md"
-            : "bg-black bg-opacity-40"
-        } ${defaultRoute ? "z-0" : "z-20"}`}
+            ? 'bg-primary-700  bg-opacity-90 backdrop-blur-sm fixed top-0 shadow-md'
+            : 'bg-black bg-opacity-40'
+        } ${defaultRoute ? 'z-0' : 'z-20'}`}
       >
         <Link href="/" className="flex items-center">
-          <Image
-            src="/assets/logos/logo1.svg"
-            width={50}
-            height={100}
-            alt="logo"
-          />
+          <Image src="/assets/logos/logo1.svg" width={50} height={100} alt="logo" />
           <p className="text-3xl hidden md:block font-alike font-bold">
             SETHI & ASSOCIATES LEGAL CONSULTANTS
           </p>
@@ -57,10 +52,10 @@ const Header: React.FC<{ isDefault: boolean; defaultRoute: boolean }> = ({
                   key={item.name}
                   href={item.href}
                   className={classNames(
-                    item.current ? "font-extrabold" : "hover:border-b-4 ",
-                    "px-2 xl:px-3.5 py-2 mr-2 border-r-2 border-b-white text-white flex items-center align-middle focus:outline-none transition-all duration-300 ease-out"
+                    item.current ? 'font-extrabold' : 'hover:border-b-4 ',
+                    'px-2 xl:px-3.5 py-2 mr-2 border-r-2 border-b-white text-white flex items-center align-middle focus:outline-none transition-all duration-300 ease-out'
                   )}
-                  aria-current={item.current ? "page" : undefined}
+                  aria-current={item.current ? 'page' : undefined}
                 >
                   {item.name}
                 </Link>

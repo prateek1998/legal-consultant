@@ -3,12 +3,11 @@ import { Icon } from '@iconify/react';
 const siteSettings = {
   name: 'Sethi and Associates',
   title: 'Best Legal Consultant in East Delhi | Preet Vihar',
-  description:
-    'Best Legal Consultant in East Delhi | Preet Vihar',
+  description: 'Best Legal Consultant in East Delhi | Preet Vihar',
   author: {
     name: 'Sethi & Associates Legal Consultant',
     websiteUrl: 'https://sethiandassociates.com',
-    address:'G-27, Preet Vihar, Near Preet Vihar Metro Station, Delhi-110092',
+    address: 'G-27, Preet Vihar, Near Preet Vihar Metro Station, Delhi-110092',
   },
   ogImageUrl: 'https://sethiandassociates.com/assets/logos/logo.jpg',
   spinner: 'http://127.0.0.1:3000/assets/logos/logogif.gif',
@@ -107,8 +106,7 @@ const siteSettings = {
       title: 'ADDRESS',
       links: [
         {
-          label:
-            'G-27, Preet Vihar, Near Preet Vihar Metro Station, Delhi-110092',
+          label: 'G-27, Preet Vihar, Near Preet Vihar Metro Station, Delhi-110092',
           href: 'https://maps.app.goo.gl/zskyiVjyfSVcSwD48',
           icon: <Icon icon="ic:round-location-on" className="text-xl text-primary-600 mr-1" />,
         },

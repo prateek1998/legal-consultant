@@ -1,49 +1,49 @@
-import React from "react";
-import Layout from "components/layout";
-import Header from "components/layout/Header";
-import Image from "next/image";
+import React from 'react';
+import Layout from 'components/layout';
+import Header from 'components/layout/Header';
+import Image from 'next/image';
 
 const teamMember = [
   {
-    name: "Rajesh Kaushik",
-    imgUrl: "/assets/images/teams/rajesh.webp",
-    msg: "As a legal consultant with more than 10+ years of experience, I have worked extensively in various areas of law, including Taxation, Criminal Law, NDPS, MCOCA, and POCSO. I have dedicated my career to helping clients reach the best possible outcome for their legal needs.",
+    name: 'Rajesh Kaushik',
+    imgUrl: '/assets/images/teams/rajesh.webp',
+    msg: 'As a legal consultant with more than 10+ years of experience, I have worked extensively in various areas of law, including Taxation, Criminal Law, NDPS, MCOCA, and POCSO. I have dedicated my career to helping clients reach the best possible outcome for their legal needs.',
   },
   {
-    name: "Animesh Sharma",
-    imgUrl: "/assets/images/teams/animesh.webp",
-    msg: "As someone who has been working in the field of law for 27 years, I have taken on a variety of challenging cases and worked with clients from all walks of life. I am dedicated to providing my clients with top-quality legal counsel and representation.",
+    name: 'Animesh Sharma',
+    imgUrl: '/assets/images/teams/animesh.webp',
+    msg: 'As someone who has been working in the field of law for 27 years, I have taken on a variety of challenging cases and worked with clients from all walks of life. I am dedicated to providing my clients with top-quality legal counsel and representation.',
   },
   {
-    name: "Hemant Gulati",
-    imgUrl: "/assets/images/teams/hemant.webp",
-    msg: "Experienced for over 13 years in civil and criminal litigation, adept in managing client relations and team collaboration. Specialized in criminal law encompassing white-collar crimes, bail, and NDPS Act, also proficient in matrimonial and consumer disputes.",
+    name: 'Hemant Gulati',
+    imgUrl: '/assets/images/teams/hemant.webp',
+    msg: 'Experienced for over 13 years in civil and criminal litigation, adept in managing client relations and team collaboration. Specialized in criminal law encompassing white-collar crimes, bail, and NDPS Act, also proficient in matrimonial and consumer disputes.',
   },
   {
-    name: "Bharat Kashyap",
-    imgUrl: "/assets/images/teams/bharat.webp",
-    msg: "With over 3 years of experience in the legal industry, I have worked on both criminal and civil matters. My expertise includes resolving issues related to NDPS, POCSO, landlord-tenant disputes, and matrimonial disputes etc. My clients are my top priority and I handle their cases with the utmost care and attention.",
+    name: 'Bharat Kashyap',
+    imgUrl: '/assets/images/teams/bharat.webp',
+    msg: 'With over 3 years of experience in the legal industry, I have worked on both criminal and civil matters. My expertise includes resolving issues related to NDPS, POCSO, landlord-tenant disputes, and matrimonial disputes etc. My clients are my top priority and I handle their cases with the utmost care and attention.',
   },
 ];
 
 const mainLeaders = [
   {
-    name: "Jitendra Sethi",
-    imgUrl: "/assets/images/teams/jitender.webp",
-    title: "Bsc.LLB Founder/Advocate ",
+    name: 'Jitendra Sethi',
+    imgUrl: '/assets/images/teams/jitender.webp',
+    title: 'Bsc.LLB Founder/Advocate ',
     msg: "Jitendra Sethi, a revered advocate with over 35 years in litigation, commands profound respect within the legal fraternity. His comprehensive understanding of the law spans diverse cases, showcasing his fearlessness in tackling any challenge. Renowned for his integrity and expertise, Jitendra embodies a deep comprehension of the law's nuances, adeptly utilizing this knowledge in argumentation and drafting. His unwavering honesty and astute legal acumen make him a stalwart in the field, consistently delivering excellence while upholding the true essence of legal principles.",
   },
   {
-    name: "Keshav Sethi",
-    imgUrl: "/assets/images/teams/keshav.webp",
-    title: "BA.LLB Advocate ",
+    name: 'Keshav Sethi',
+    imgUrl: '/assets/images/teams/keshav.webp',
+    title: 'BA.LLB Advocate ',
     msg: "Keshav Sethi, a legal professional with a profound understanding of cyber and IPR laws through specialized diplomas, is dedicated to safeguarding clients' rights. His in-depth legal knowledge coupled with unwavering honesty drives him to tackle challenges head-on. Keshav excels in paramount argumentative skills, advocating fiercely for his clients. He prioritizes their interests, ensuring robust protection within the legal realm while fearlessly navigating complexities with expertise and integrity. He is also  published author of several legal research papers.",
   },
   {
-    name: "Anshika Sethi",
-    imgUrl: "/assets/images/teams/anshika.webp",
-    title: "BA.LLB Advocate ",
-    msg: "I am a legal consultant with six years of experience in the field. I am dedicated to providing my clients with assertive and effective representation in both civil and criminal law cases. If you are seeking a knowledgeable and experienced lawyer, look no further than Sethi & Associates Legal Consultant!",
+    name: 'Anshika Sethi',
+    imgUrl: '/assets/images/teams/anshika.webp',
+    title: 'BA.LLB Advocate ',
+    msg: 'I am a legal consultant with six years of experience in the field. I am dedicated to providing my clients with assertive and effective representation in both civil and criminal law cases. If you are seeking a knowledgeable and experienced lawyer, look no further than Sethi & Associates Legal Consultant!',
   },
 ];
 
@@ -57,8 +57,8 @@ const AboutUs = () => {
               About Us
             </span>
             <h1 className="text-3xl font-bold capitalize dark:text-white">
-              {" "}
-              Meet Our Wonderful Team{" "}
+              {' '}
+              Meet Our Wonderful Team{' '}
             </h1>
           </div>
           <div className="flex flex-wrap justify-center">
@@ -107,41 +107,37 @@ const AboutUs = () => {
                         </div>
                       </div>
                     </div>
-                    <h2 className="mb-2 text-xl font-bold dark:text-white">
-                      {team.name}
-                    </h2>
+                    <h2 className="mb-2 text-xl font-bold dark:text-white">{team.name}</h2>
                     <p className="text-lg font-bold text-blue-500 dark:text-blue-300 ">
                       {team.title}
                     </p>
-                    <p className="mb-4 text-sm text-gray-400 dark:text-gray-400">
-                      {team.msg}
-                    </p>
+                    <p className="mb-4 text-sm text-gray-400 dark:text-gray-400">{team.msg}</p>
                   </a>
                 </div>
               </div>
-            ))}</div>
+            ))}
+          </div>
         </div>
       </section>
       <section className="flex items-center pb-24 bg-stone-100 font-poppins dark:bg-gray-800 ">
         <div className="justify-center flex-1 px-4 py-6 mx-auto max-w-7xl lg:py-4 md:px-6">
           <div className="mb-10 text-center">
             <h1 className="text-3xl font-bold capitalize dark:text-white">
-              <span className="border-b-4 px-5 border-blue-700 ">
-                Meet Our Team{" "}
-              </span>
+              <span className="border-b-4 px-5 border-blue-700 ">Meet Our Team </span>
             </h1>
             <span className="block mb-4 text-xs font-semibold leading-4 tracking-widest text-center text-gray-500 mt-3 dark:text-gray-400">
-              At Sethi & Associates Legal Consultant, we&aposre known for our highly
-              knowledgeable team who never shies away from a challenge. Our
-              Associates are skilled researchers and confident in their
-              abilities to tackle any legal situation you may face. Meet the
-              team below and see why we&aposre considered one of the top legal
-              consultants.
+              At Sethi & Associates Legal Consultant, we&aposre known for our highly knowledgeable
+              team who never shies away from a challenge. Our Associates are skilled researchers and
+              confident in their abilities to tackle any legal situation you may face. Meet the team
+              below and see why we&aposre considered one of the top legal consultants.
             </span>
           </div>
           <div className="grid grid-cols-1 gap-4 lg:gap-8 sm:gap-4 sm:grid-cols-2 lg:grid-cols-2">
             {teamMember.map((team, i) => (
-              <div key={i} className="flex flex-col flex-wrap mb-0 overflow-hidden rounded lg:flex-row dark:bg-gray-800">
+              <div
+                key={i}
+                className="flex flex-col flex-wrap mb-0 overflow-hidden rounded lg:flex-row dark:bg-gray-800"
+              >
                 <div className="w-full overflow-hidden lg:w-2/4 h-100">
                   <Image
                     src={team.imgUrl}
@@ -153,15 +149,9 @@ const AboutUs = () => {
                 </div>
                 <div className="relative flex self-center flex-1 p-8 ml-0 bg-white border rounded shadow dark:border-gray-700 dark:bg-gray-700 lg:items-center lg:-ml-12">
                   <div>
-                    <h2 className="mb-2 text-xl font-bold dark:text-gray-300">
-                      {team.name}
-                    </h2>
-                    <p className="mb-4 text-sm text-blue-500 dark:text-blue-400">
-                      Advocate
-                    </p>
-                    <p className="mb-4 text-sm text-gray-400 dark:text-gray-400">
-                      {team.msg}
-                    </p>
+                    <h2 className="mb-2 text-xl font-bold dark:text-gray-300">{team.name}</h2>
+                    <p className="mb-4 text-sm text-blue-500 dark:text-blue-400">Advocate</p>
+                    <p className="mb-4 text-sm text-gray-400 dark:text-gray-400">{team.msg}</p>
                     {/* <div className="flex">
                     <span className="inline-block mr-5 text-gray-700 dark:text-gray-400 hover:text-blue-500">
                       <svg

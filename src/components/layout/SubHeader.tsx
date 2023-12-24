@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
 import Link from 'next/link';
 import siteSettings from 'settings/site-settings';
 
@@ -33,13 +33,15 @@ const SubHeader = () => {
             >
               {subHeaderNavigation.phone.icon}
             </Link>
-            {subHeaderNavigation.phone.details.map((number) =>
-              <Link href={number.href}
+            {subHeaderNavigation.phone.details.map((number) => (
+              <Link
+                href={number.href}
                 key={number.label}
-                className="inline-flex items-center xl:text-base pl-2 hover:text-primary-600 hover:underline">
+                className="inline-flex items-center xl:text-base pl-2 hover:text-primary-600 hover:underline"
+              >
                 <span className="">{number.label}</span>
               </Link>
-            )}
+            ))}
           </div>
 
           {/* right subHeader Optons*/}
@@ -62,7 +64,7 @@ const SubHeader = () => {
         </div>
       </div>
     </Fragment>
-  )
-}
+  );
+};
 
 export default SubHeader;

@@ -1,7 +1,7 @@
-import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const textVariants = {
   initial: {
@@ -42,22 +42,19 @@ const AboutSection = () => {
                 </h1>
               </div>
               <p className="px-4 mb-10 text-base leading-7 text-gray-500 dark:text-gray-400">
-                Sethi & Associates Legal Consultants understands how confused
-                you may be feeling, and We are here to protect your rights and
-                to fight in your corner. You don’t have to suffer in silence if
-                the law is on your side.Sethi & Associates Legal Consultant will
-                provide you with an initial consultation to see if and how We
-                can serve your interests. Legal cases can be complicated and
-                intimidating. We will guide you through every step of your case,
-                keeping you right up to date, making sure you understand exactly
-                what is going on, and advising you on every decision that needs
-                to be made. Sethi & Associates Legal Consultant keeps you
-                involved and at the very center of Our attention. We are here to
-                serve you and are proud to have been protecting the rights of
-                the people since 35 years now.
+                Sethi & Associates Legal Consultants understands how confused you may be feeling,
+                and We are here to protect your rights and to fight in your corner. You don’t have
+                to suffer in silence if the law is on your side.Sethi & Associates Legal Consultant
+                will provide you with an initial consultation to see if and how We can serve your
+                interests. Legal cases can be complicated and intimidating. We will guide you
+                through every step of your case, keeping you right up to date, making sure you
+                understand exactly what is going on, and advising you on every decision that needs
+                to be made. Sethi & Associates Legal Consultant keeps you involved and at the very
+                center of Our attention. We are here to serve you and are proud to have been
+                protecting the rights of the people since 35 years now.
               </p>
               <Link
-                href={"/about-us"}
+                href={'/about-us'}
                 className="w-40 mx-auto text-center bg-primary-700  hover:bg-blue-600 text-white font-bold py-3 px-6 border-b-4 border-blue-700 hover:border-blue-500 rounded"
               >
                 Know More

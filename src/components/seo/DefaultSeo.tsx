@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { DefaultSeo as NextDefaultSeo } from 'next-seo';
 import siteSettings from 'settings/site-settings';
 
@@ -93,6 +93,6 @@ const DefaultSeo = () => {
       ]}
     />
   );
-}
+};
 
-export default DefaultSeo
+export default DefaultSeo;

@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import type { AppProps } from 'next/app'
+import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
 
 import DefaultSeo from 'components/seo/DefaultSeo';
 
-import 'styles/globals.css'
+import 'styles/globals.css';
 
 interface Props {
   children: React.ReactNode;
@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <ThemeProvider
       disableTransitionOnChange
       attribute="class"
-      value={{ light: "light", dark: "dark" }}
+      value={{ light: 'light', dark: 'dark' }}
       defaultTheme="system"
     >
       <DefaultSeo />

@@ -20,7 +20,9 @@ const Footer = () => {
             />
           </a>
           <p className="mt-2 text-sm font-thin">
-          At Sethi & Associates Legal Consultant, we&apos;re known for our highly knowledgeable team who never shies away from a challenge. Our Associates are skilled researchers and confident in their abilities to tackle any legal situation you may face.
+            At Sethi & Associates Legal Consultant, we&apos;re known for our highly knowledgeable
+            team who never shies away from a challenge. Our Associates are skilled researchers and
+            confident in their abilities to tackle any legal situation you may face.
           </p>
         </div>
 
@@ -68,19 +70,19 @@ const Footer = () => {
               className="text-white ml-1 hover:underline tracking-wide"
               target="_blank"
             >
-            {siteSettings.author.name}
+              {siteSettings.author.name}
             </Link>
-            <span className='mr-2'> All Rights Reserved.</span>
-              Developed by 
-              <a
-                href="https://www.instagram.com/codingwithprateek"
-                target="_blank"
-                className={'text-primary-100  s-xl font-alike mx-1'}
-                data-te-toggle="tooltip"
-                title={`Follow us on Instagram`}
-              >
-                Coding with Prateek
-              </a>
+            <span className="mr-2"> All Rights Reserved.</span>
+            Developed by
+            <a
+              href="https://www.instagram.com/codingwithprateek"
+              target="_blank"
+              className={'text-primary-100  s-xl font-alike mx-1'}
+              data-te-toggle="tooltip"
+              title={`Follow us on Instagram`}
+            >
+              Coding with Prateek
+            </a>
           </p>
           {/* <div className="flex items-center lg:ml-auto mt-2 lg:mt-0 justify-center sm:justify-start">
             Developed by 
