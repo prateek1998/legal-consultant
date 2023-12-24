@@ -62,8 +62,8 @@ const AboutUs = () => {
             </h1>
           </div>
           <div className="flex flex-wrap justify-center">
-            {mainLeaders.map((team) => (
-              <div className="w-full px-4 mb-4 lg:w-1/3 md:w-1/2 lg:mb-0">
+            {mainLeaders.map((team, i) => (
+              <div key={i} className="w-full px-4 mb-4 lg:w-1/3 md:w-1/2 lg:mb-0">
                 <div className="p-6 bg-white rounded shadow dark:bg-gray-700 group">
                   <a className="block mb-2" href="#">
                     <div className="relative overflow-hidden">
@@ -131,17 +131,17 @@ const AboutUs = () => {
               </span>
             </h1>
             <span className="block mb-4 text-xs font-semibold leading-4 tracking-widest text-center text-gray-500 mt-3 dark:text-gray-400">
-              At Sethi & Associates Legal Consultant, we're known for our highly
+              At Sethi & Associates Legal Consultant, we&aposre known for our highly
               knowledgeable team who never shies away from a challenge. Our
               Associates are skilled researchers and confident in their
               abilities to tackle any legal situation you may face. Meet the
-              team below and see why we're considered one of the top legal
+              team below and see why we&aposre considered one of the top legal
               consultants.
             </span>
           </div>
           <div className="grid grid-cols-1 gap-4 lg:gap-8 sm:gap-4 sm:grid-cols-2 lg:grid-cols-2">
-            {teamMember.map((team) => (
-              <div className="flex flex-col flex-wrap mb-0 overflow-hidden rounded lg:flex-row dark:bg-gray-800">
+            {teamMember.map((team, i) => (
+              <div key={i} className="flex flex-col flex-wrap mb-0 overflow-hidden rounded lg:flex-row dark:bg-gray-800">
                 <div className="w-full overflow-hidden lg:w-2/4 h-100">
                   <Image
                     src={team.imgUrl}
