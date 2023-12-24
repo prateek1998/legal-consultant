@@ -1,7 +1,7 @@
 // import { GetServerSideProps } from 'next';
 // import { AxiosResponse } from 'axios';
 // import { MDXRemote } from 'next-mdx-remote';
-// import Layout from 'components/layout';
+import Layout from 'components/layout';
 // import Breadcrumps from 'components/breadcrumbs';
 // import { ICollectionResponse, IPrivacyPolicy } from 'types';
 // import { fetchPrivacyPolicy } from 'pages/api';
@@ -11,6 +11,16 @@
 // interface privacyPolicyBody {
 //   privacyPolicyBody: any;
 // }
+import React from 'react'
+
+const PrivacyPolicy = () => {
+  return (
+    <div>PrivacyPolicy</div>
+  )
+}
+
+export default PrivacyPolicy
+
 
 // export default function PrivacyPolicy({ privacyPolicyBody }: privacyPolicyBody) {
 //   return (
@@ -41,4 +51,4 @@
 //   };
 // };
 
-// PrivacyPolicy.Layout = Layout;
+PrivacyPolicy.Layout = Layout;
