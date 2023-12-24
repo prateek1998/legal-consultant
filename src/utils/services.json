@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "data": "CRIMINAL LAW",
+    "logo": "build.svg"
+  },
+  {
+    "id": 2,
+    "data": "CIVIL LAW",
+    "logo": "group.svg"
+  },
+  {
+    "id": 3,
+    "data": "TRADEMARK & COPYRIGHT",
+    "logo": "order.svg"
+  },
+  {
+    "id": 4,
+    "data": "CORPORATE & COMPANY LAWS ",
+    "logo": "build.svg"
+  },
+  {
+    "id": 5,
+    "data": "ARBITRATION",
+    "logo": "legal.svg"
+  },
+  {
+    "id": 6,
+    "data": "MATRIMONIAL DISPUTES",
+    "logo": "build.svg"
+  },
+  {
+    "id": 7,
+    "data": "PMLA",
+    "logo": "police.svg"
+  },
+  {
+    "id": 8,
+    "data": "NI ACT",
+    "logo": "order-paper.svg"
+  },
+  {
+    "id": 9,
+    "data": "EOW",
+    "logo": "jail.svg"
+  }
+]

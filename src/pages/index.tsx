@@ -1,9 +1,10 @@
-import AboutSection from 'components/home/AboutSection';
-import HeroSection from 'components/home/HeroSection';
-import ServiceSection from 'components/home/ServiceSection';
-import TestimonialSection from 'components/home/TestimonialSection';
+import dynamic from 'next/dynamic';
 import Layout from 'components/layout';
-import Image from 'next/image';
+import HeroSection from 'components/home/HeroSection';
+const AboutSection = dynamic(() => import('components/home/AboutSection'));
+const ServiceSection = dynamic(() => import('components/home/ServiceSection'));
+const OrderSection = dynamic(() => import('components/home/OrderCaseSection'));
+const TestimonialSection = dynamic(() => import('components/home/TestimonialSection'));
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <HeroSection />
       <AboutSection />
       <ServiceSection />
+      <OrderSection />
       <TestimonialSection />
 
       {/* <h2 className="h-screen bg-yellow-50">hello pradteek</h2>

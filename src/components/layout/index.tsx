@@ -12,8 +12,6 @@ const Layout: React.FC<Props> = ({ children }) => {
   // Use the useEffect hook to perform an action when the component mounts
   useEffect(() => {
     const currentUrl = router.pathname;
-
-    // console.log('Current URL:', router);
     if (currentUrl == '/') setDefaultRoute(true);
     else setDefaultRoute(false);
   }, [router]);

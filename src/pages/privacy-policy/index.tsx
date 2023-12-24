@@ -11,16 +11,13 @@ import Layout from 'components/layout';
 // interface privacyPolicyBody {
 //   privacyPolicyBody: any;
 // }
-import React from 'react'
+import React from 'react';
 
 const PrivacyPolicy = () => {
-  return (
-    <div>PrivacyPolicy</div>
-  )
-}
+  return <div>PrivacyPolicy</div>;
+};
 
-export default PrivacyPolicy
-
+export default PrivacyPolicy;
 
 // export default function PrivacyPolicy({ privacyPolicyBody }: privacyPolicyBody) {
 //   return (

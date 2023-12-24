@@ -1,50 +1,9 @@
 import React from 'react';
 import Layout from 'components/layout';
 import Image from 'next/image';
-
-const teamMember = [
-  {
-    name: 'Rajesh Kaushik',
-    imgUrl: '/assets/images/teams/rajesh.webp',
-    msg: 'As a legal consultant with more than 10+ years of experience, I have worked extensively in various areas of law, including Taxation, Criminal Law, NDPS, MCOCA, and POCSO. I have dedicated my career to helping clients reach the best possible outcome for their legal needs.',
-  },
-  {
-    name: 'Animesh Sharma',
-    imgUrl: '/assets/images/teams/animesh.webp',
-    msg: 'As someone who has been working in the field of law for 27 years, I have taken on a variety of challenging cases and worked with clients from all walks of life. I am dedicated to providing my clients with top-quality legal counsel and representation.',
-  },
-  {
-    name: 'Hemant Gulati',
-    imgUrl: '/assets/images/teams/hemant.webp',
-    msg: 'Experienced for over 13 years in civil and criminal litigation, adept in managing client relations and team collaboration. Specialized in criminal law encompassing white-collar crimes, bail, and NDPS Act, also proficient in matrimonial and consumer disputes.',
-  },
-  {
-    name: 'Bharat Kashyap',
-    imgUrl: '/assets/images/teams/bharat.webp',
-    msg: 'With over 3 years of experience in the legal industry, I have worked on both criminal and civil matters. My expertise includes resolving issues related to NDPS, POCSO, landlord-tenant disputes, and matrimonial disputes etc. My clients are my top priority and I handle their cases with the utmost care and attention.',
-  },
-];
-
-const mainLeaders = [
-  {
-    name: 'Jitendra Sethi',
-    imgUrl: '/assets/images/teams/jitender.webp',
-    title: 'Bsc.LLB Founder/Advocate ',
-    msg: "Jitendra Sethi, a revered advocate with over 35 years in litigation, commands profound respect within the legal fraternity. His comprehensive understanding of the law spans diverse cases, showcasing his fearlessness in tackling any challenge. Renowned for his integrity and expertise, Jitendra embodies a deep comprehension of the law's nuances, adeptly utilizing this knowledge in argumentation and drafting. His unwavering honesty and astute legal acumen make him a stalwart in the field, consistently delivering excellence while upholding the true essence of legal principles.",
-  },
-  {
-    name: 'Keshav Sethi',
-    imgUrl: '/assets/images/teams/keshav.webp',
-    title: 'BA.LLB Advocate ',
-    msg: "Keshav Sethi, a legal professional with a profound understanding of cyber and IPR laws through specialized diplomas, is dedicated to safeguarding clients' rights. His in-depth legal knowledge coupled with unwavering honesty drives him to tackle challenges head-on. Keshav excels in paramount argumentative skills, advocating fiercely for his clients. He prioritizes their interests, ensuring robust protection within the legal realm while fearlessly navigating complexities with expertise and integrity. He is also  published author of several legal research papers.",
-  },
-  {
-    name: 'Anshika Sethi',
-    imgUrl: '/assets/images/teams/anshika.webp',
-    title: 'BA.LLB Advocate ',
-    msg: 'I am a legal consultant with six years of experience in the field. I am dedicated to providing my clients with assertive and effective representation in both civil and criminal law cases. If you are seeking a knowledgeable and experienced lawyer, look no further than Sethi & Associates Legal Consultant!',
-  },
-];
+import Link from 'next/link';
+import mainLeaders from 'utils/main-leaders.json';
+import teamMembers from 'utils/team-members.json';
 
 const AboutUs = () => {
   return (
@@ -55,16 +14,15 @@ const AboutUs = () => {
             <span className="block mb-4 text-xs font-semibold leading-4 tracking-widest text-center text-blue-500 uppercase dark:text-gray-400">
               About Us
             </span>
-            <h1 className="text-3xl font-bold capitalize dark:text-white">
-              {' '}
-              Meet Our Wonderful Team{' '}
+            <h1 className="w-full text-3xl font-bold capitalize dark:text-">
+              <span className="border-b-4 px-5 border-blue-700 "> Meet Our Wonderful Team</span>
             </h1>
           </div>
           <div className="flex flex-wrap justify-center">
             {mainLeaders.map((team, i) => (
               <div key={i} className="w-full px-4 mb-4 lg:w-1/3 md:w-1/2 lg:mb-0">
                 <div className="p-6 bg-white rounded shadow dark:bg-gray-700 group">
-                  <a className="block mb-2" href="#">
+                  <div className="block mb-2">
                     <div className="relative overflow-hidden">
                       <div className="mb-5 overflow-hidden">
                         <Image
@@ -76,34 +34,65 @@ const AboutUs = () => {
                         />
                       </div>
                       <div className="absolute flex flex-col top-4 right-4">
-                        <div className="flex items-center">
-                          <div className="relative flex items-center justify-center p-3 mb-3 transition-all translate-x-20 bg-white rounded group-hover:translate-x-0 wishlist hover:bg-blue-200 group">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              fill="currentColor"
-                              className="w-6 h-6 text-blue-800 bi bi-facebook dark:text-gray-400"
-                              viewBox="0 0 16 16"
+                        {team.fbUrl && (
+                          <div className="flex items-center">
+                            <Link
+                              href={team.fbUrl}
+                              target="_blank"
+                              className="relative flex items-center justify-center p-3 mb-3 transition-all translate-x-20 bg-white rounded group-hover:translate-x-0 wishlist hover:bg-blue-200 group"
                             >
-                              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                            </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                className="w-6 h-6 text-blue-800 bi bi-facebook dark:text-gray-400"
+                                viewBox="0 0 16 16"
+                              >
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                              </svg>
+                            </Link>
                           </div>
-                        </div>
-                        <div className="flex items-center">
-                          <div className="relative flex items-center justify-center p-3 mb-3 transition-all translate-x-20 bg-white rounded group-hover:translate-x-0 wishlist hover:bg-blue-200 group">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              fill="currentColor"
-                              className="w-6 h-6 text-blue-500 dark:text-gray-400 bi bi-twitter"
-                              viewBox="0 0 16 16"
+                        )}
+                        {team.twitUrl && (
+                          <div className="flex items-center">
+                            <Link
+                              href={team.twitUrl}
+                              target="_blank"
+                              className="relative flex items-center justify-center p-3 mb-3 transition-all translate-x-20 bg-white rounded group-hover:translate-x-0 wishlist hover:bg-blue-200 group"
                             >
-                              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                            </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                className="w-6 h-6 text-blue-500 dark:text-gray-400 bi bi-twitter"
+                                viewBox="0 0 16 16"
+                              >
+                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                              </svg>
+                            </Link>
                           </div>
-                        </div>
+                        )}
+                        {team.linkedinUrl && (
+                          <div className="flex items-center">
+                            <Link
+                              href={team.linkedinUrl}
+                              target="_blank"
+                              className="relative flex items-center justify-center p-3 mb-3 transition-all translate-x-20 bg-white rounded group-hover:translate-x-0 wishlist hover:bg-blue-200 group"
+                            >
+                              <svg
+                                viewBox="0 0 1024 1024"
+                                fill="currentColor"
+                                height="1em"
+                                width="1em"
+                                className="w-6 h-6 text-blue-800 bi bi-facebook dark:text-gray-400"
+                              >
+                                <path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM349.3 793.7H230.6V411.9h118.7v381.8zm-59.3-434a68.8 68.8 0 1168.8-68.8c-.1 38-30.9 68.8-68.8 68.8zm503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7 120.2 0 142.3 79.1 142.3 181.9v209.4z" />
+                              </svg>
+                            </Link>
+                          </div>
+                        )}
                       </div>
                     </div>
                     <h2 className="mb-2 text-xl font-bold dark:text-white">{team.name}</h2>
@@ -111,7 +100,7 @@ const AboutUs = () => {
                       {team.title}
                     </p>
                     <p className="mb-4 text-sm text-gray-400 dark:text-gray-400">{team.msg}</p>
-                  </a>
+                  </div>
                 </div>
               </div>
             ))}
@@ -132,7 +121,7 @@ const AboutUs = () => {
             </span>
           </div>
           <div className="grid grid-cols-1 gap-4 lg:gap-8 sm:gap-4 sm:grid-cols-2 lg:grid-cols-2">
-            {teamMember.map((team, i) => (
+            {teamMembers.map((team, i) => (
               <div
                 key={i}
                 className="flex flex-col flex-wrap mb-0 overflow-hidden rounded lg:flex-row dark:bg-gray-800"

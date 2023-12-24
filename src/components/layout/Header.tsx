@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import siteSettings from 'settings/site-settings';
 import Drawer from '../drawer';
+import { useTheme } from 'next-themes';
 // const Header: React.FC<> = () => {
 const Header: React.FC<{ isDefault: boolean; defaultRoute: boolean }> = ({
   isDefault,
@@ -10,6 +11,8 @@ const Header: React.FC<{ isDefault: boolean; defaultRoute: boolean }> = ({
 }) => {
   const { headerNavigation } = siteSettings;
   const [open, setOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [darkMode, setdarkMode] = useState<any>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   // detect whether user has scrolled the page down by 250px
@@ -28,6 +31,17 @@ const Header: React.FC<{ isDefault: boolean; defaultRoute: boolean }> = ({
   }
   const handleDrawer = () => {
     setOpen(!open);
+  };
+
+  useEffect(() => {
+    let themeState = localStorage.getItem('theme');
+    if (themeState === 'dark') setdarkMode(true);
+    else setdarkMode(false);
+  }, [theme]);
+
+  const handleTheme = (checked: boolean) => {
+    if (checked) setTheme('dark');
+    else setTheme('light');
   };
   return (
     <header className="w-full flex flex-col h-full">
@@ -120,6 +134,20 @@ const Header: React.FC<{ isDefault: boolean; defaultRoute: boolean }> = ({
               {menuItem.name}
             </Link>
           ))}
+          <div className="mx-auto mt-4 text-2xl">
+            <label className="relative inline-flex items-center cursor-pointer">
+              <input
+                type="checkbox"
+                checked={darkMode}
+                onClick={(e: any) => handleTheme(e.target.checked)}
+                className="sr-only peer"
+              />
+              <div className="w-14 h-8 mt-[-5px] bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-primary-700"></div>
+              <span className="ms-3 text-2xl font-medium text-gray-900 dark:text-gray-300">
+                Dark Mode
+              </span>
+            </label>
+          </div>
         </div>
       </Drawer>
     </header>

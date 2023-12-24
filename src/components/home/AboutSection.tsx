@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
+import CountUp from 'react-countup';
+import Counter from 'components/counter';
 
 const textVariants = {
   initial: {
@@ -33,14 +35,31 @@ const AboutSection = () => {
         <div className="flex flex-wrap ">
           <div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 ">
             <div className="lg:max-w-md flex flex-col">
-              <div className="px-4 pl-4 mb-6 border-l-4 border-blue-500">
+              <motion.div
+                className="px-4 pl-4 mb-6 border-l-4 border-blue-500"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                variants={{
+                  visible: { opacity: 1, scale: 1 },
+                  hidden: { opacity: 0, scale: 0 },
+                }}
+              >
+                <motion.span className="text-sm text-gray-600 uppercase dark:text-gray-400">
+                  Who we are?
+                </motion.span>
+                <motion.h1 className="font-alike mt-2 text-3xl font-black text-gray-700 md:text-5xl dark:text-gray-300">
+                  About Us
+                </motion.h1>
+                {/* <div className="">
                 <span className="text-sm text-gray-600 uppercase dark:text-gray-400">
                   Who we are?
                 </span>
                 <h1 className="font-alike mt-2 text-3xl font-black text-gray-700 md:text-5xl dark:text-gray-300">
                   About Us
-                </h1>
-              </div>
+                </h1> */}
+              </motion.div>
               <p className="px-4 mb-10 text-base leading-7 text-gray-500 dark:text-gray-400">
                 Sethi & Associates Legal Consultants understands how confused you may be feeling,
                 and We are here to protect your rights and to fight in your corner. You don’t have
@@ -77,14 +96,18 @@ const AboutSection = () => {
         <div className="relative z-10 justify-center flex-1 max-w-6xl px-4 py-4 mx-auto lg:py-0">
           <div className="flex items-center justify-evenly py-4 -mx-3">
             <div className="w-full px-4 lg:mb-0 md:w-1/4 lg:w-2/12">
-              <h2 className="pb-2 text-5xl font-bold text-white">98% </h2>
+              <h2 className="pb-2 text-5xl font-bold text-white">
+                <Counter end={98} /> {' %'}
+              </h2>
               <div className="w-16 mb-4 border-b-2 border-gray-300 "></div>
               <p className="text-base font-normal  leading-4 text-gray-300 lg:w-64">
                 Clients Satisfaction
               </p>
             </div>
             <div className="w-full px-4 lg:mb-0 md:w-1/4 lg:w-2/12">
-              <h2 className="pb-2 text-5xl font-bold text-white">35+ </h2>
+              <h2 className="pb-2 text-5xl font-bold text-white">
+                <Counter end={35} /> {' +'}
+              </h2>
               <div className="w-16 mb-4 border-b-2 border-gray-300 "></div>
               <p className="text-base font-normal leading-4 text-gray-300 lg:w-64">
                 Years Practice

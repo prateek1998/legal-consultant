@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
       disableTransitionOnChange
       attribute="class"
       value={{ light: 'light', dark: 'dark' }}
-      defaultTheme="system"
+      // defaultTheme="system"
     >
       <DefaultSeo />
       {nodeEnv === 'production' && (
