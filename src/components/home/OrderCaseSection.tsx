@@ -60,6 +60,7 @@ const OrderSection: React.FC = () => {
                 </p>
                 <div className=" mt-4">
                   <Link
+                    target='_blank'
                     href={order.fileUrl}
                     className="w-full flex items-center justify-center px-4 py-2 text-center bg-primary-700 text-white rounded-md dark:bg-blue-500 dark:hover:bg-gray-900 hover:bg-blue-500"
                   >
