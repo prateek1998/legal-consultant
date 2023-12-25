@@ -88,7 +88,7 @@ const AboutSection = () => {
               src="/assets/images/about.jpg"
               alt=""
               width={450}
-              height={50}
+              height={550}
               className="relative object-cover h-full rounded"
             />
           </AnimateInView>
