@@ -71,7 +71,7 @@ const AboutSection = () => {
           </div>
           <AnimateInView
             variants={{
-              hidden: { opacity: 0, x: 100 },
+              hidden: { opacity: 0 },
               show: {
                 x: 0,
                 opacity: 1,
