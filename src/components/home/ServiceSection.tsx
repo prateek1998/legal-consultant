@@ -1,29 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
 import services from 'utils/services.json';
-const textVariants = {
-  initial: {
-    x: -500,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
-  },
-  scrollButton: {
-    opacity: 0,
-    y: 10,
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-    },
-  },
-};
+import AnimateInView from 'components/animateInView';
 
 const ServiceSection = () => {
   return (
@@ -37,14 +14,27 @@ const ServiceSection = () => {
         </h1>
         <div className="grid pt-4 grid-cols-1 gap-x-4 gap-y-6 lg:gap-x-8 lg:gap-y-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <div
+            <AnimateInView
+              variants={{
+                hidden: { opacity: 0 },
+                show: {
+                  x: 0,
+                  opacity: 1,
+                  transition: {
+                    delay: 0.15,
+                    duration: 0.9,
+                    ease: 'easeInOut',
+                  },
+                },
+              }}
+              initial="hidden"
               key={index}
               className="w-full border-2 border-blue-200 p-4 text-center transition-all bg-primary-700 rounded-lg hover:bg-primary-600 hover:shadow-lg"
             >
               <p className="text-left text-white -400 pb-4"> 0{service.id}</p>
               <img className="mx-auto mb-3" src={`assets/logos/${service.logo}`} />
               <h3 className="mb-4 text-2xl capitalize font-semibold text-white">{service.data}</h3>
-            </div>
+            </AnimateInView>
           ))}
         </div>
       </div>

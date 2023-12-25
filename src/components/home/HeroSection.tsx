@@ -1,18 +1,11 @@
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Slider from 'components/slider';
 import Header from 'components/layout/Header';
 import SubHeader from 'components/layout/SubHeader';
-import Link from 'next/link';
-
-const assets = [
-  '/assets/images/bg/IMG_2838.jpg',
-  '/assets/images/bg/IMG_2840.jpg',
-  '/assets/images/bg/IMG_2843.jpg',
-  '/assets/images/bg/IMG_2879.jpg',
-  '/assets/images/bg/IMG_2880.jpg',
-];
+import heroList from 'utils/hero.json';
 
 const textVariants = {
   initial: {
@@ -45,8 +38,8 @@ const HeroSection = () => {
         <Header isDefault={true} defaultRoute={false} />
       </div>
       <Slider navigations={false} slidesPerView={1} spaceBetween={0} effect="fade" delay={3000}>
-        {assets &&
-          assets.map((slide, index) => (
+        {heroList &&
+          heroList.map((slide, index) => (
             <div
               key={index}
               className="relative max-h-screen h-[calc(100vh_-_56px)] lg:h-[calc(100vh)] w-screen"
@@ -56,34 +49,30 @@ const HeroSection = () => {
                 width={1920}
                 height={1080}
                 alt={'slide-' + index}
-                src={slide}
+                src={slide.fileUrl}
                 loading="lazy"
               />
               <div className="absolute z-20 w-full h-full bg-primary-1000/30 backdrop-brightness-75" />
+              <div className="container absolute z-20 px-2 sm:px-7 mx-auto flex flex-wrap items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl bg-opacity-30 sm:py-6 bg-blend-saturation">
+                <div className="lg:w-2/5 w-full textShadow tracking-wide">
+                  <h2 className="title-font font-alike font-medium mb-3 text-4xl lg:text-5xl text-white capitalize">
+                    <span className=" border-b-2 border-white"> {slide.title}</span>
+                  </h2>
+                  <h2 className="text-white text-5xl md:text-7xl font-bold capitalize font-alike sm:pb-1">
+                    Focused on Client Based Law firm
+                  </h2>
+                </div>
+              </div>
             </div>
           ))}
       </Slider>
-      <div className="container absolute z-10 px-2 sm:px-7 mx-auto flex flex-wrap items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl bg-opacity-30 sm:py-6 bg-blend-saturation">
-        <motion.div
+      {/* <motion.div
           className="lg:w-2/5 w-full textShadow tracking-wide"
           variants={textVariants}
           initial="initial"
           animate="animate"
         >
-          <motion.h2
-            className="title-font font-alike font-medium mb-3 text-4xl lg:text-5xl text-white capitalize"
-            variants={textVariants}
-          >
-            <span className=" border-b-2 border-white"> Legal Experts</span>
-          </motion.h2>
-          <motion.h2
-            className="text-white text-5xl md:text-7xl font-bold capitalize font-alike sm:pb-1"
-            variants={textVariants}
-          >
-            Focused on Client Based Law firm
-          </motion.h2>
-        </motion.div>
-      </div>
+        </motion.div> */}
       <div>
         <Link
           href="#about"

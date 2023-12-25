@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from 'components/layout';
 import Link from 'next/link';
 import orders from 'utils/orders.json';
+import AnimateInView from 'components/animateInView';
 
 const Work = () => {
   return (
@@ -18,7 +19,20 @@ const Work = () => {
           </div>
           <div className="grid pt-4 grid-cols-1 gap-x-4 gap-y-6 lg:gap-x-8 lg:gap-y-8 md:grid-cols-2 lg:grid-cols-3">
             {orders.map((order, index) => (
-              <div
+              <AnimateInView
+                variants={{
+                  hidden: { opacity: 0 },
+                  show: {
+                    x: 0,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.15,
+                      duration: 0.9,
+                      ease: 'easeInOut',
+                    },
+                  },
+                }}
+                initial="hidden"
                 key={index}
                 className="w-full border-2 border-blue-200 p-4 text-white transition-all bg-primary-700 rounded-lg hover:bg-primary-600 hover:shadow-lg"
               >
@@ -50,7 +64,7 @@ const Work = () => {
                     </span>
                   </Link>
                 </div>
-              </div>
+              </AnimateInView>
             ))}
           </div>
         </div>

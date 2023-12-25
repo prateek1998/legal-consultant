@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "fileUrl": "/assets/images/bg/slides-1.jpg",
+    "title": "Legal Experts",
+    "subTitle": "Focused on client based law firm"
+  },
+  {
+    "id": 2,
+    "fileUrl": "/assets/images/bg/slides-2.jpg",
+    "title": "Expert Team",
+    "subTitle": "Expert Legal Support & Justice "
+  },
+  {
+    "id": 3,
+    "fileUrl": "/assets/images/bg/slides-3.jpg",
+    "title": "Care Committed",
+    "subTitle": "We work for client legal success"
+  },
+  {
+    "id": 1,
+    "fileUrl": "/assets/images/bg/slides-4.jpg",
+    "title": "Legal Experts",
+    "subTitle": "Focused on client based law firm"
+  },
+  {
+    "id": 1,
+    "fileUrl": "/assets/images/bg/slides-5.jpg",
+    "title": "Expert Team",
+    "subTitle": "Expert Legal Support & Justice "
+  }
+]

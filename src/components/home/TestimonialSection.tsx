@@ -1,30 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
 import Slider from 'components/slider';
 import testimonials from 'utils/testimonials.json';
-const textVariants = {
-  initial: {
-    x: -500,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
-  },
-  scrollButton: {
-    opacity: 0,
-    y: 10,
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-    },
-  },
-};
 
 const TestimonialSection: React.FC = () => {
   return (

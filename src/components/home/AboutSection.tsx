@@ -1,32 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import CountUp from 'react-countup';
+import AnimateInView from 'components/animateInView';
 import Counter from 'components/counter';
-
-const textVariants = {
-  initial: {
-    x: -500,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
-  },
-  scrollButton: {
-    opacity: 0,
-    y: 10,
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-    },
-  },
-};
 
 const AboutSection = () => {
   return (
@@ -35,52 +11,79 @@ const AboutSection = () => {
         <div className="flex flex-wrap ">
           <div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 ">
             <div className="lg:max-w-md flex flex-col">
-              <motion.div
+              <AnimateInView
                 className="px-4 pl-4 mb-6 border-l-4 border-blue-500"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
                 variants={{
-                  visible: { opacity: 1, scale: 1 },
-                  hidden: { opacity: 0, scale: 0 },
+                  hidden: { opacity: 0, x: -100 },
+                  show: {
+                    x: 0,
+                    opacity: 1,
+                    transition: {
+                      delay: 0,
+                      duration: 0.9,
+                    },
+                  },
                 }}
+                initial="hidden"
               >
-                <motion.span className="text-sm text-gray-600 uppercase dark:text-gray-400">
-                  Who we are?
-                </motion.span>
-                <motion.h1 className="font-alike mt-2 text-3xl font-black text-gray-700 md:text-5xl dark:text-gray-300">
-                  About Us
-                </motion.h1>
-                {/* <div className="">
                 <span className="text-sm text-gray-600 uppercase dark:text-gray-400">
                   Who we are?
                 </span>
                 <h1 className="font-alike mt-2 text-3xl font-black text-gray-700 md:text-5xl dark:text-gray-300">
                   About Us
-                </h1> */}
-              </motion.div>
-              <p className="px-4 mb-10 text-base leading-7 text-gray-500 dark:text-gray-400">
-                Sethi & Associates Legal Consultants understands how confused you may be feeling,
-                and We are here to protect your rights and to fight in your corner. You don’t have
-                to suffer in silence if the law is on your side.Sethi & Associates Legal Consultant
-                will provide you with an initial consultation to see if and how We can serve your
-                interests. Legal cases can be complicated and intimidating. We will guide you
-                through every step of your case, keeping you right up to date, making sure you
-                understand exactly what is going on, and advising you on every decision that needs
-                to be made. Sethi & Associates Legal Consultant keeps you involved and at the very
-                center of Our attention. We are here to serve you and are proud to have been
-                protecting the rights of the people since 35 years now.
-              </p>
-              <Link
-                href={'/about-us'}
-                className="w-40 mx-auto text-center bg-primary-700  hover:bg-blue-600 text-white font-bold py-3 px-6 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+                </h1>
+              </AnimateInView>
+              <AnimateInView
+                variants={{
+                  hidden: { opacity: 0 },
+                  show: {
+                    x: 0,
+                    opacity: 1,
+                    transition: {
+                      delay: 0,
+                      duration: 0.9,
+                      ease: 'easeInOut',
+                    },
+                  },
+                }}
+                initial="hidden"
               >
-                Know More
-              </Link>
+                <p className="px-4 mb-10 text-base leading-7 text-gray-500 dark:text-gray-400">
+                  Sethi & Associates Legal Consultants understands how confused you may be feeling,
+                  and We are here to protect your rights and to fight in your corner. You don’t have
+                  to suffer in silence if the law is on your side.Sethi & Associates Legal
+                  Consultant will provide you with an initial consultation to see if and how We can
+                  serve your interests. Legal cases can be complicated and intimidating. We will
+                  guide you through every step of your case, keeping you right up to date, making
+                  sure you understand exactly what is going on, and advising you on every decision
+                  that needs to be made. Sethi & Associates Legal Consultant keeps you involved and
+                  at the very center of Our attention. We are here to serve you and are proud to
+                  have been protecting the rights of the people since 35 years now.
+                </p>
+                <Link
+                  href={'/about-us'}
+                  className="w-40 mx-auto text-center bg-primary-700  hover:bg-blue-600 text-white font-bold py-3 px-6 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+                >
+                  Know More
+                </Link>
+              </AnimateInView>
             </div>
           </div>
-          <div className="w-full mb-10 lg:w-1/2 lg:mb-0 ">
+          <AnimateInView
+            variants={{
+              hidden: { opacity: 0, x: 100 },
+              show: {
+                x: 0,
+                opacity: 1,
+                transition: {
+                  delay: 0,
+                  duration: 0.9,
+                },
+              },
+            }}
+            initial="hidden"
+            className="w-full mb-10 lg:w-1/2 lg:mb-0 "
+          >
             <Image
               src="/assets/images/about.jpg"
               alt=""
@@ -88,7 +91,7 @@ const AboutSection = () => {
               height={50}
               className="relative object-cover h-full rounded"
             />
-          </div>
+          </AnimateInView>
         </div>
       </div>
       <div className="relative py-10 bg-center bg-no-repeat bg-cover bg-blue-900">

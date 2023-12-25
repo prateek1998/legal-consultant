@@ -82,7 +82,7 @@ const Header: React.FC<{ isDefault: boolean; defaultRoute: boolean }> = ({
             href="tel:+919958852527"
             aria-controls="mobile-menu"
             aria-expanded="false"
-            className=" flex flex-col justify-center items-center pt-5 mr-3 "
+            className=" flex flex-col justify-center items-center pt-2 mr-3 "
           >
             <svg
               fill="currentColor"
@@ -138,7 +138,7 @@ const Header: React.FC<{ isDefault: boolean; defaultRoute: boolean }> = ({
             <label className="relative inline-flex items-center cursor-pointer">
               <input
                 type="checkbox"
-                checked={darkMode}
+                defaultChecked={darkMode}
                 onClick={(e: any) => handleTheme(e.target.checked)}
                 className="sr-only peer"
               />

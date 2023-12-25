@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import mainLeaders from 'utils/main-leaders.json';
 import teamMembers from 'utils/team-members.json';
+import AnimateInView from 'components/animateInView';
 
 const AboutUs = () => {
   return (
@@ -20,7 +21,23 @@ const AboutUs = () => {
           </div>
           <div className="flex flex-wrap justify-center">
             {mainLeaders.map((team, i) => (
-              <div key={i} className="w-full px-4 mb-4 lg:w-1/3 md:w-1/2 lg:mb-0">
+              <AnimateInView
+                variants={{
+                  hidden: { opacity: 0 },
+                  show: {
+                    x: 0,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.15,
+                      duration: 0.9,
+                      ease: 'easeInOut',
+                    },
+                  },
+                }}
+                initial="hidden"
+                key={i}
+                className="w-full px-4 mb-4 lg:w-1/3 md:w-1/2 lg:mb-0"
+              >
                 <div className="p-6 bg-white rounded shadow dark:bg-gray-700 group">
                   <div className="block mb-2">
                     <div className="relative overflow-hidden">
@@ -102,7 +119,7 @@ const AboutUs = () => {
                     <p className="mb-4 text-sm text-gray-400 dark:text-gray-400">{team.msg}</p>
                   </div>
                 </div>
-              </div>
+              </AnimateInView>
             ))}
           </div>
         </div>
@@ -122,7 +139,20 @@ const AboutUs = () => {
           </div>
           <div className="grid grid-cols-1 gap-4 lg:gap-8 sm:gap-4 sm:grid-cols-2 lg:grid-cols-2">
             {teamMembers.map((team, i) => (
-              <div
+              <AnimateInView
+                variants={{
+                  hidden: { opacity: 0 },
+                  show: {
+                    x: 0,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.15,
+                      duration: 0.9,
+                      ease: 'easeInOut',
+                    },
+                  },
+                }}
+                initial="hidden"
                 key={i}
                 className="flex flex-col flex-wrap mb-0 overflow-hidden rounded lg:flex-row dark:bg-gray-800"
               >
@@ -180,7 +210,7 @@ const AboutUs = () => {
                   </div> */}
                   </div>
                 </div>
-              </div>
+              </AnimateInView>
             ))}
           </div>
         </div>
