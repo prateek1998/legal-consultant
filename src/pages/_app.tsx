@@ -4,7 +4,7 @@ import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
 
 import DefaultSeo from 'components/seo/DefaultSeo';
-
+import 'animate.css';
 import 'styles/globals.css';
 
 interface Props {

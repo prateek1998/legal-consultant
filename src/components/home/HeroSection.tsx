@@ -53,13 +53,16 @@ const HeroSection = () => {
                 loading="lazy"
               />
               <div className="absolute z-20 w-full h-full bg-primary-1000/30 backdrop-brightness-75" />
-              <div className="container absolute z-20 px-2 sm:px-7 mx-auto flex flex-wrap items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl bg-opacity-30 sm:py-6 bg-blend-saturation">
+
+              <div
+                className={`container absolute z-20 px-2 sm:px-7 mx-auto flex flex-wrap items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl bg-opacity-30 sm:py-6 bg-blend-saturation`}
+              >
                 <div className="lg:w-2/5 w-full textShadow tracking-wide">
-                  <h2 className="title-font font-alike font-medium mb-3 text-4xl lg:text-5xl text-white capitalize">
+                  <h2 className="animate__animated animate__backInLeft title-font font-alike font-medium mb-3 text-4xl lg:text-5xl text-white capitalize">
                     <span className=" border-b-2 border-white"> {slide.title}</span>
                   </h2>
-                  <h2 className="text-white text-5xl md:text-7xl font-bold capitalize font-alike sm:pb-1">
-                    Focused on Client Based Law firm
+                  <h2 className="animate__animated animate__backInRight text-white text-5xl md:text-7xl font-bold capitalize font-alike sm:pb-1">
+                    {slide.subTitle}
                   </h2>
                 </div>
               </div>
