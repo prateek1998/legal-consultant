@@ -43,7 +43,6 @@ const Work = () => {
                 </p>
                 <div className=" mt-4">
                   <Link
-                    target='_blank'
                     href={order.fileUrl}
                     className="w-full flex items-center justify-center px-4 py-2 text-center text-gray-900 bg-blue-300 rounded-md dark:bg-gray-700 dark:text-white dark:hover:bg-gray-900 hover:bg-blue-400"
                   >

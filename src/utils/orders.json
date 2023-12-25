@@ -1,91 +1,91 @@
 [
   {
     "id": 1,
-    "fileUrl": "/api/pdf?file=akhilesh.pdf",
+    "fileUrl": "/assets/orders/akhilesh.pdf",
     "title": "Akhilesh Arya Cases",
     "subTitle": "Appeal under Cr.P.C & POCSO Act, Section 6: Appellant convicted but sentence upto life imprisonment reduced due to mitigating factors—no brutality, clean record, family support—released after 11+ years served."
   },
   {
     "id": 2,
-    "fileUrl": "/api/pdf?file=landlord.pdf",
+    "fileUrl": "/assets/orders/landlord.pdf",
     "title": "Landlord-Tenant Dispute",
     "subTitle": "Interim relief  under O39 R10 of CPC in favour of the Landlord. "
   },
   {
     "id": 3,
-    "fileUrl": "/api/pdf?file=landlord2.pdf",
+    "fileUrl": "/assets/orders/landlord2.pdf",
     "title": "Landlord-Tenant Dispute",
     "subTitle": "Decree passed under Order 12 Rule 06 CPC in favour of Landlord for possession of the disputed property"
   },
   {
     "id": 4,
-    "fileUrl": "/api/pdf?file=order.pdf",
+    "fileUrl": "/assets/orders/order.pdf",
     "title": "Order for registration of FIR ",
     "subTitle": "Order for registration of FIR under 156(3) CrPC after the police refused to lodge FIR."
   },
   {
     "id": 5,
-    "fileUrl": "/api/pdf?file=order2.pdf",
+    "fileUrl": "/assets/orders/order2.pdf",
     "title": "Order for registration of FIR",
     "subTitle": "Order for registration of FIR under 156(3) Crpc after the police on repeated requests and written complaints by the aggrieved party."
   },
   {
     "id": 6,
-    "fileUrl": "/api/pdf?file=crpc.pdf",
+    "fileUrl": "/assets/orders/crpc.pdf",
     "title": "Order of bail U/s.439 Crpc ",
     "subTitle": "Order of bail U/s.439 Crpc in a case which was alleged to be of Honor killing. Bail was decided and allowed after consideration of various legal and circumstantial aspects of the case."
   },
   {
     "id": 7,
-    "fileUrl": "/api/pdf?file=interim-bail.pdf",
+    "fileUrl": "/assets/orders/interim-bail.pdf",
     "title": "Interim bail granted ",
     "subTitle": "bail granted to our client  having multiple cases and involvements."
   },
   {
     "id": 8,
-    "fileUrl": "/api/pdf?file=crpc2.pdf",
+    "fileUrl": "/assets/orders/crpc2.pdf",
     "title": "Anticipatory Bail u/s.438 Crpc",
     "subTitle": "Anticipatory Bail u/s.438 Crpc. A person was allegedly involved in case pertaining to rape on the pretext of marriage, but astute observation of Hon’ble High court and the work of our Firm anticipatory bail was secured in very early period when such case were very rare. "
   },
   {
     "id": 9,
-    "fileUrl": "/api/pdf?file=crpc3.pdf",
+    "fileUrl": "/assets/orders/crpc3.pdf",
     "title": "Statutory/ default bail U/s.167 Crpc ",
     "subTitle": "Statutory/ default bail U/s.167 Crpc in case pertaining to MCOCA which was granting in favour of our client which was both challenging and tricky to achieve but the Firm overcame it with years of experience and legal work to deliver the best result."
   },
   {
     "id": 10,
-    "fileUrl": "/api/pdf?file=crpc4.pdf",
+    "fileUrl": "/assets/orders/crpc4.pdf",
     "title": "Anticipatory Bail U/s. 167 Crpc",
     "subTitle": "An interstate Case which was argued in Hamirpur(dist.) Himachal Pradesh for Anticipatory Bail U/s. 167 Crpc in case pertaining to cheating and forgery which was allowed and granted in favour of our client. "
   },
   {
     "id": 11,
-    "fileUrl": "/api/pdf?file=suspension.pdf",
+    "fileUrl": "/assets/orders/suspension.pdf",
     "title": "Suspension of sentence after half sentenced ",
     "subTitle": "Suspension of sentence after half sentenced was duly served by our client which was appreciated by the Hon’ble High court while allowing the same in favour of our client."
   },
   {
     "id": 12,
-    "fileUrl": "/api/pdf?file=graver.pdf",
+    "fileUrl": "/assets/orders/graver.pdf",
     "title": "Graver the offence stricter should be the proof",
     "subTitle": "The Hon'ble Court while upholding the established legal proposition “ graver the offence stricter should be the proof” discharged and acquitted all the accused person in case U/s.21/29 NDPS."
   },
   {
     "id": 13,
-    "fileUrl": "/api/pdf?file=insufficient.pdf",
+    "fileUrl": "/assets/orders/insufficient.pdf",
     "title": "Insufficient evidence",
     "subTitle": "Insufficient evidence: No direct link to crimes, incomplete chain of events. Lack of proof for planning/conspiracy. Our client was acquitted due to benefit of doubt after a in depth arguments on circumstances surrounding the case and legal aspects.Insufficient evidence: No direct link to crimes, incomplete chain of events. Lack of proof for planning/conspiracy. Our client was acquitted due to benefit of doubt after a in depth arguments on circumstances surrounding the case and legal aspects."
   },
   {
     "id": 14,
-    "fileUrl": "/api/pdf?file=eyewitness.pdf",
+    "fileUrl": "/assets/orders/eyewitness.pdf",
     "title": "Dying declaration and sole eyewitness ",
     "subTitle": "Dying declaration and sole eyewitness testimony lacked corroboration; investigator's potential fabrication led to assailants' names not initially mentioned. Lack of evidence against appellants overturned their convictions for rioting, murder, and unlawful assembly."
   },
   {
     "id": 15,
-    "fileUrl": "/api/pdf?file=prosecution.pdf",
+    "fileUrl": "/assets/orders/prosecution.pdf",
     "title": "Prosecution alleges accused killed MTNL ",
     "subTitle": "Prosecution alleges accused killed MTNL officer over detected fraud. Delayed evidence submission, contradictory witness statements, lack of weapon evidence, and doubts in recoveries discredit the conviction. Court finds insufficient proof to justify conviction, highlighting investigative and procedural shortcomings."
   }

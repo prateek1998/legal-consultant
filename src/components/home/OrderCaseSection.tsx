@@ -5,20 +5,20 @@ import AnimateInView from 'components/animateInView';
 let topOrders = [
   {
     id: 1,
-    fileUrl: "/api/pdf?file=akhilesh.pdf",
+    fileUrl: '/assets/orders/akhilesh.pdf',
     title: 'Akhilesh Arya Cases',
     subTitle:
       'Appeal under Cr.P.C & POCSO Act, Section 6: Appellant convicted but sentence upto life imprisonment reduced due to mitigating factors—no brutality, clean record, family support—released after 11+ years served.',
   },
   {
     id: 2,
-    fileUrl: "/api/pdf?file=landlord.pdf",
+    fileUrl: '/assets/orders/landlord.pdf',
     title: 'Landlord-Tenant Dispute',
     subTitle: 'Interim relief  under O39 R10 of CPC in favour of the Landlord. ',
   },
   {
     id: 3,
-    fileUrl: "/api/pdf?file=landlord2.pdf",
+    fileUrl: '/assets/orders/landlord2.pdf',
     title: 'Landlord-Tenant Dispute',
     subTitle:
       'Decree passed under Order 12 Rule 06 CPC in favour of Landlord for possession of the disputed property',
@@ -60,7 +60,6 @@ const OrderSection: React.FC = () => {
                 </p>
                 <div className=" mt-4">
                   <Link
-                    target='_blank'
                     href={order.fileUrl}
                     className="w-full flex items-center justify-center px-4 py-2 text-center bg-primary-700 text-white rounded-md dark:bg-blue-500 dark:hover:bg-gray-900 hover:bg-blue-500"
                   >
