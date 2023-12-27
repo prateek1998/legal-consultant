@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from 'components/layout';
 import siteSettings from 'settings/site-settings';
+import Link from 'next/link';
 
 const ContactUs = () => {
   const { footerNavigation } = siteSettings;
@@ -48,7 +49,7 @@ const ContactUs = () => {
                   </div>
                 </div>
                 <div className="ml-6 grow">
-                  <p className="mb-2 font-bold text-white underline">Technical support</p>
+                  <p className="mb-2 font-bold text-white underline">Email</p>
                   <p className="text-sm text-gray-300">{footerNavigation[1].links[0].label}</p>
                 </div>
               </div>
@@ -75,7 +76,14 @@ const ContactUs = () => {
                 </div>
                 <div className="ml-6 grow">
                   <p className="mb-2 font-bold text-white underline">Address</p>
-                  <p className="text-sm text-gray-300">{footerNavigation[2].links[0].label}</p>
+                  {footerNavigation[2].links.map((location, index ) => (
+                    <div key={index} className="mt-2">
+                      <p className="text-md underline text-blue-300 py-1 font-bold ">{location.title}</p>
+                      <Link href={location.href}>
+                        <p className="text-sm text-gray-300">{location.label}</p>
+                      </Link>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="grid grid-cols-1 auto-rows-auto lg:grid-cols-4 lg:pl-20 -mb-10 lg:mt-0 mt-10 lg:text-left text-center">
+        <div className="grid grid-cols-1 auto-rows-auto lg:grid-cols-3 lg:pl-20 -mb-10 lg:mt-0 mt-10 lg:text-left text-center">
           {footerNavigation.map((section) => {
             return (
               <div key={section.title}>
@@ -36,20 +36,21 @@ const Footer = () => {
                     {section.title}
                   </h2>
                   <nav className="list-none lg:mb-10">
-                    {section.links.map((link: any) => {
-                      return (
-                        <li key={link.label}>
-                          <Link
-                            href={link.href}
-                            target="_blank"
-                            className="flex justify-center lg:justify-start text-sm font-thin hover:underline"
-                          >
-                            <span>{link.icon}</span>
-                            <span>{link.label}</span>
-                          </Link>
-                        </li>
-                      );
-                    })}
+                    {section.links.map((link: any) => (
+                      <li key={link.label}>
+                        <p className="text-md underline text-blue-300 py-1 font-bold ">
+                          {link.title}
+                        </p>
+                        <Link
+                          href={link.href}
+                          target="_blank"
+                          className="flex justify-center lg:justify-start text-sm font-thin hover:underline"
+                        >
+                          <span className="mr-2 ">{link.icon}</span>
+                          <span>{link.label}</span>
+                        </Link>
+                      </li>
+                    ))}
                   </nav>
                 </div>
                 <div className="border-b-4 mx-auto my-4 w-16 lg:hidden" />

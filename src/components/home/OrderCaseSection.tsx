@@ -5,20 +5,20 @@ import AnimateInView from 'components/animateInView';
 let topOrders = [
   {
     id: 1,
-    fileUrl: '/assets/orders/akhilesh.pdf',
+    fileUrl: 'https://drive.google.com/file/d/1Yr8TUUdgeG6QB44WX_XtK_cSnoZQiOYj/view',
     title: 'Akhilesh Arya Cases',
     subTitle:
       'Appeal under Cr.P.C & POCSO Act, Section 6: Appellant convicted but sentence upto life imprisonment reduced due to mitigating factors—no brutality, clean record, family support—released after 11+ years served.',
   },
   {
     id: 2,
-    fileUrl: '/assets/orders/landlord.pdf',
+    fileUrl: 'https://drive.google.com/file/d/1Ww07oGtDfUmtTgTgQsF-R03lskD_pSll/view?usp=sharing',
     title: 'Landlord-Tenant Dispute',
     subTitle: 'Interim relief  under O39 R10 of CPC in favour of the Landlord. ',
   },
   {
     id: 3,
-    fileUrl: '/assets/orders/landlord2.pdf',
+    fileUrl: 'https://drive.google.com/file/d/1R61SIop-hEqdJZU-ORt0k3RgYFTbQrFK/view?usp=sharing',
     title: 'Landlord-Tenant Dispute',
     subTitle:
       'Decree passed under Order 12 Rule 06 CPC in favour of Landlord for possession of the disputed property',

@@ -106,8 +106,15 @@ const siteSettings = {
       title: 'ADDRESS',
       links: [
         {
+          title: 'Main HQ (Preet Vihar Office)',
           label: 'G-27, Preet Vihar, Near Preet Vihar Metro Station, Delhi-110092',
           href: 'https://maps.app.goo.gl/zskyiVjyfSVcSwD48',
+          icon: <Icon icon="ic:round-location-on" className="text-xl text-primary-600 mr-1" />,
+        },
+        {
+          title: 'Karol Bagh Office',
+          label: 'Flat no 205 2nd floor Dakha Chamber street no 38/39 building no 2068/2069 Nai walan Karol Bagh 110005',
+          href: 'https://maps.google.com/?q=28.650030,77.196167',
           icon: <Icon icon="ic:round-location-on" className="text-xl text-primary-600 mr-1" />,
         },
       ],
