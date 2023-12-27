@@ -21,7 +21,7 @@ const ResearchSection: React.FC = () => {
         >
           {researchWorks.map((research, i) => {
             return (
-              <div className="p-8 bg-white rounded shadow dark:bg-gray-700">
+              <div key={i} className="p-8 bg-white rounded shadow dark:bg-gray-700">
                 <h2 className="my-3 text-2xl font-bold dark:text-gray-300">{research.title}</h2>
                 <p className="mb-4 leading-relaxed dark:text-gray-400 text-blueGray-400">
                   {research.subTitle}{' '}
