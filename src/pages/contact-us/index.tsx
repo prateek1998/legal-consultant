@@ -76,9 +76,11 @@ const ContactUs = () => {
                 </div>
                 <div className="ml-6 grow">
                   <p className="mb-2 font-bold text-white underline">Address</p>
-                  {footerNavigation[2].links.map((location, index ) => (
+                  {footerNavigation[2].links.map((location, index) => (
                     <div key={index} className="mt-2">
-                      <p className="text-md underline text-blue-300 py-1 font-bold ">{location.title}</p>
+                      <p className="text-md underline text-blue-300 py-1 font-bold ">
+                        {location.title}
+                      </p>
                       <Link href={location.href}>
                         <p className="text-sm text-gray-300">{location.label}</p>
                       </Link>

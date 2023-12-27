@@ -73,7 +73,7 @@ const siteSettings = {
     {
       title: 'QUICK LINKS',
       links: [
-        { label: 'Home', href: '/' },
+        { label: 'Home', title: '', href: '/' },
         { label: 'Practice Areas', href: '/#practice-areas' },
         { label: 'About', href: '/about-us' },
         { label: 'Our Work', href: '/work' },
@@ -84,6 +84,7 @@ const siteSettings = {
       title: 'CONTACT',
       links: [
         {
+          title: '',
           label: 'sethiassoicatesdelhi@gmail.com',
           href: 'mailto:sethiassoicatesdelhi@gmail.com',
           icon: (
@@ -91,11 +92,13 @@ const siteSettings = {
           ),
         },
         {
+          title: '',
           label: '+91-98-1006-2191',
           href: 'tel:+919810062191',
           icon: <Icon icon="ic:baseline-phone-in-talk" className="text-xl text-primary-600 mr-1" />,
         },
         {
+          title: '',
           label: '+91-99-5885-2527',
           href: 'tel:+919958852527',
           icon: <Icon icon="ic:baseline-phone-in-talk" className="text-xl text-primary-600 mr-1" />,
@@ -113,7 +116,8 @@ const siteSettings = {
         },
         {
           title: 'Karol Bagh Office',
-          label: 'Flat no 205 2nd floor Dakha Chamber street no 38/39 building no 2068/2069 Nai walan Karol Bagh 110005',
+          label:
+            'Flat no 205 2nd floor Dakha Chamber street no 38/39 building no 2068/2069 Nai walan Karol Bagh 110005',
           href: 'https://maps.google.com/?q=28.650030,77.196167',
           icon: <Icon icon="ic:round-location-on" className="text-xl text-primary-600 mr-1" />,
         },
