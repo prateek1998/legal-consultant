@@ -131,10 +131,10 @@ const AboutUs = () => {
               <span className="border-b-4 px-5 border-blue-700 ">Meet Our Team </span>
             </h1>
             <span className="block mb-4 text-xs font-semibold leading-4 tracking-widest text-center text-gray-500 mt-3 dark:text-gray-400">
-              At Sethi & Associates Legal Consultant, We are known for our highly knowledgeable
+              At Sethi & Associates Legal Consultant, We&apos;re known for our highly knowledgeable
               team who never shies away from a challenge. Our Associates are skilled researchers and
               confident in their abilities to tackle any legal situation you may face. Meet the team
-              below and see why we&aposre considered one of the top legal consultants.
+              below and see why we&apos;re considered one of the top legal consultants.
             </span>
           </div>
           <div className="grid grid-cols-1 gap-4 lg:gap-8 sm:gap-4 sm:grid-cols-2 lg:grid-cols-2">

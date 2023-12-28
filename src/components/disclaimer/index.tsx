@@ -18,8 +18,8 @@ export default function DisclaimerDialog() {
             </h2>
             <p className="text-md">
               According to the regulations set forth by the Bar Council of India, Sethi & Associates
-              (referred to as the &quotFirm&quot) is prohibited from engaging in solicitation or
-              advertising activities. By selecting the &quotI Agree&quot option below, the user
+              (referred to as the &quot;Firm&quot;) is prohibited from engaging in solicitation or
+              advertising activities. By selecting the &quot;I Agree&quot; option below, the user
               affirms the following:
             </p>
             <ul className="list-disc pl-3 mb-3 h-80 overflow-y-auto">
@@ -33,7 +33,7 @@ export default function DisclaimerDialog() {
                 pertaining to the Firm, including its practice areas, advocates, and solicitors.
               </p>
               <p>
-                3. The user&aposs intent is to acquire information about the Firm solely for
+                3. The user&apos;s intent is to acquire information about the Firm solely for
                 personal or professional informational purposes.
               </p>
               <p>
@@ -55,7 +55,7 @@ export default function DisclaimerDialog() {
                 7. The content featured on this website is considered the intellectual property of
                 the Firm.
               </p>
-              Please read and accept our website&aposs Terms of Use and our Privacy Policy
+              Please read and accept our website&apos;s Terms of Use and our Privacy Policy
             </ul>
             <button
               onClick={handleClose}

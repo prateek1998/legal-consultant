@@ -85,9 +85,9 @@ const AboutSection = () => {
             className="w-full mb-10 lg:w-1/2 lg:mb-0 "
           >
             <Image
-              src="/assets/images/about.jpg"
+              src="/assets/images/aboutpic.jpg"
               alt=""
-              width={450}
+              width={850}
               height={550}
               className="relative object-cover h-full rounded"
             />
