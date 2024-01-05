@@ -6,6 +6,7 @@ import { ThemeProvider } from 'next-themes';
 import DefaultSeo from 'components/seo/DefaultSeo';
 import 'styles/globals.css';
 import 'animate.css';
+import GoogleAnalytics from 'components/misc/googleAnalytics';
 
 interface Props {
   children: React.ReactNode;
@@ -34,8 +35,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <DefaultSeo />
       {nodeEnv === 'production' && (
         <>
-          {/* <GoogleAnalytics />
-          <FbMessenger /> */}
+           <GoogleAnalytics />
+          {/*<FbMessenger /> */}
         </>
       )}
       <Layout pageProps={pageProps}>
