@@ -2,8 +2,8 @@ import { Icon } from '@iconify/react';
 
 const siteSettings = {
   name: 'Sethi and Associates',
-  title: 'Best Legal Consultant in East Delhi | Preet Vihar',
-  description: 'Best Legal Consultant in East Delhi | Preet Vihar',
+  title: 'Law Firm in Delhi | Best Lawyers in Delhi- Sethi & Associates ',
+  description: 'Best Legal Consultant in East Delhi | Preet Vihar | Sethi & Associates is a Law Firm in Delhi. We are team of Professional Divorce Lawyers in Delhi | Criminal Lawyers in Delhi | Family Lawyers in Delhi |Civil Lawyers in Delhi| Matrimonial Lawyers in Delhi | Corporate Lawyers in Delhi.To Contact us visit our Website.',
   author: {
     name: 'Sethi & Associates Legal Consultant',
     websiteUrl: 'https://sethiandassociates.com',

@@ -5,10 +5,15 @@ import Link from 'next/link';
 import mainLeaders from 'utils/main-leaders.json';
 import teamMembers from 'utils/team-members.json';
 import AnimateInView from 'components/animateInView';
+import SEO from 'components/seo';
 
 const AboutUs = () => {
   return (
     <>
+       <SEO
+        title="Keshav Sethi, Jitendra Sethi, Sethi & Associates is team of Best Divorce Lawyers in Delhi. To get advice From our Expert Divorce Lawyers|Matrimonial lawyers|Family lawyers in Delhi Kindly Visit our website."
+        description="Law Firm in Delhi, Lawyers In Delhi, Law Firm in Delhi NCR, Keshav Sethi, Jitendra Sethi & Associate,Legal Firms in Delhi,Divorce Lawyers in Delhi, Criminal Lawyers in Delhi, Family Lawyers, Supreme court lawyers, High court Lawyers, Preet vihar, Delhi, Noida, Gurgaon, Best, Top"
+      />
       <section className="flex items-center pt-24 pb-10 bg-stone-100 font-poppins dark:bg-gray-800 ">
         <div className="justify-center flex-1 max-w-6xl px-4 py-6 mx-auto lg:py-4 md:px-6">
           <div className="mb-10 text-center">
